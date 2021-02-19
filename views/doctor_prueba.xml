@@ -1,0 +1,50 @@
+<!--Vista del modelo doctor-->
+<odoo>
+	<record model="ir.ui.view" id="action_vista_doctor_tree">
+    <field name="name">registro.doctor.tree</field>
+    <field name="model">doctor.prueba</field>
+    <field name="arch" type="xml">
+      <tree string="Tabla de doctores">
+      	<field name="apellido"/>
+        <field name="nombre" />  
+        <field name="celular" />
+      </tree>
+    </field>
+ 	</record>
+
+	<record model="ir.ui.view" id="action_vista_doctor_form">
+    <field name="name">registro.doctor.form</field>
+    <field name="model">doctor.prueba</field>
+    <field name="arch" type="xml">
+      	<form string="Formulario de doctores">
+        <sheet>
+          	<group colspan="2">
+          		<group>
+		          	<field name="foto" widget="image"/> 
+          		</group>
+          		<group>
+			        <field name="name"/>
+			        <field name="nombre" />
+			        <field name="apellido"/> 
+			        <field name="celular"/>
+		            <field name="n_colegiatura"/>
+		        </group>
+		    </group>
+		    <group>
+		            <field name="id_especialidad"/>
+		    </group>
+		</sheet>
+		<sheet>
+			<group>
+		        <field name="id_cita" readonly="1">
+		            <tree>
+		                <field name="name"/>
+		                <field name="especialidad"/>
+		            </tree>
+		        </field>  
+		    </group>      
+	    </sheet>
+	   	</form>
+	</field>
+	</record>
+</odoo>

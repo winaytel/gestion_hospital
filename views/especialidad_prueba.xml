@@ -1,0 +1,32 @@
+<!--Vista del modelo especialidad-->
+<odoo>
+  <record model="ir.ui.view" id="action_vista_especialidad_tree">
+      <field name="name">registro.especialidad.tree</field>
+      <field name="model">especialidad.prueba</field>
+      <field name="arch" type="xml">
+       <tree string="Tabla de las especialidades">
+          <field name="name"/>
+          <field name="nombre_especialidad"/>
+       </tree>
+      </field>
+  </record>
+
+  <record model="ir.ui.view" id="action_vista_especialidad_form">
+      <field name="name">registro.especialidad.form</field>
+      <field name="model">especialidad.prueba</field>
+      <field name="arch" type="xml">
+       <form string="Formulario de las especialidades">
+        <sheet>
+        <group colspan="2"> 
+          <group>
+            <field name="name"/>
+          </group>
+        </group>
+        <group> 
+            <field name="nombre_especialidad"/>
+        </group>
+        </sheet>
+       </form>
+      </field>
+  </record>
+</odoo>

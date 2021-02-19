@@ -1,0 +1,113 @@
+<odoo>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="prueba.list">
+      <field name="name">prueba list</field>
+      <field name="model">prueba.prueba</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="prueba.action_window">
+      <field name="name">prueba window</field>
+      <field name="res_model">prueba.prueba</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="prueba.action_server">
+      <field name="name">prueba server</field>
+      <field name="model_id" ref="model_prueba_prueba"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="prueba" id="prueba.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="prueba.menu_1" parent="prueba.menu_root"/>
+    <menuitem name="Menu 2" id="prueba.menu_2" parent="prueba.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="prueba.menu_1_list" parent="prueba.menu_1"
+              action="prueba.action_window"/>
+    <menuitem name="Server to list" id="prueba" parent="prueba.menu_2"
+              action="prueba.action_server"/>
+-->
+
+<!--Vistas-->
+
+
+
+<!--Acciones-->
+<record model="ir.actions.act_window" id="action_list_especialidad">
+      <field name="name">Especialidades del hospital</field>
+      <field name="res_model">especialidad.prueba</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="action_list_doctor">
+      <field name="name">Doctores del hospital</field>
+      <field name="res_model">doctor.prueba</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="action_list_cita">
+      <field name="name">Citas del hospital</field>
+      <field name="res_model">cita.prueba</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="action_list_sala">
+      <field name="name">Salas del hospital</field>
+      <field name="res_model">sala.prueba</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="action_list_paciente">
+      <field name="name">Pacientes del hospital</field>
+      <field name="res_model">paciente.prueba</field>
+      <field name="view_mode">kanban,form</field>
+</record>
+
+<record model="ir.actions.act_window" id="action_list_registroclinico">
+      <field name="name">Registros clínicos del hospital</field>
+      <field name="res_model">registroclinico.prueba</field>
+      <field name="view_mode">tree,form</field>
+</record>
+
+<!--Menús-->
+  <menuitem  id="menu_principal" name="Registro Hospital"/>
+  <menuitem  id="menu_principal_1" name="Registro Hospital" parent="menu_principal"/>
+
+  <menuitem  id="menu_especialidad" parent="menu_principal_1" name="Registro de especialidades" action="action_list_especialidad"/>
+  <menuitem  id="menu_doctor" parent="menu_principal_1" name="Registro de doctores" action="action_list_doctor"/>
+  <menuitem  id="menu_cita" parent="menu_principal_1" name="Registro de citas" 
+  action="action_list_cita"/>
+  <menuitem  id="menu_sala" parent="menu_principal_1" name="Registro de salas" 
+  action="action_list_sala"/>
+  <menuitem  id="menu_paciente" parent="menu_principal_1" name="Registro de pacientes" action="action_list_paciente"/>
+  <menuitem  id="menu_registroclinico" parent="menu_principal_1" name="Registros clínicos" action="action_list_registroclinico"/>
+
+</odoo>

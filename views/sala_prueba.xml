@@ -1,0 +1,42 @@
+<!--Vista del modelo sala
+	1. Tabla del modelo sala
+	2. Formulario del modelo sala-->
+<odoo>
+	<!--1. Tabla del modelo sala-->
+	<record model="ir.ui.view" id="action_vista_sala_tree">
+    <field name="name">registro.sala.tree</field>
+    <field name="model">sala.prueba</field>
+    <field name="arch" type="xml">
+      <tree string="Tabla de las salas">
+            <field name="name"/> 
+            <field name="ubicacion"/>
+      </tree>
+    </field>
+	</record>
+
+	<!--2. Formulario del modelo sala-->
+	<record model="ir.ui.view" id="action_vista_sala_form">
+    <field name="name">registro.sala.form</field>
+    <field name="model">sala.prueba</field>
+    <field name="arch" type="xml">
+      <form string="Formulario de las salas">
+        <sheet>
+          <group colspan="2">
+            <group>
+              <field name="name"/>
+            </group>
+          </group>
+          <group> 
+            <field name="ubicacion"/>
+            <field name="id_cita_sala" readonly="1">
+                 <tree>
+                    <field name="id_doctor"/>
+                    <field name="fecha"/>
+                 </tree>
+            </field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+	</record>
+</odoo>

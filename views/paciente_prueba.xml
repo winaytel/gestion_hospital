@@ -1,0 +1,65 @@
+<!--Vista del modelo paciente
+	1. kanban del modelo paciente
+	2. Formulario del modelo sala-->
+<odoo>
+	<record model="ir.ui.view" id="action_vista_paciente_kanban">
+    <field name="name">registro.paciente.kanban</field>
+    <field name="model">paciente.prueba</field>
+    <field name="arch" type="xml">
+      <kanban string="Kanban de los pacientes">
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_global_click">
+              <strong>
+                <field name="apellido"/>
+              </strong>
+              <br/>
+                <field name="nombre"/>
+              <br/>
+                <field name="name"/>
+            </div>
+          </t>
+        </templates>
+    </kanban>
+    </field>
+	</record>
+
+	<record model="ir.ui.view" id="action_vista_paciente_form">
+    <field name="name">registro.paciente.form</field>
+    <field name="model">paciente.prueba</field>
+    <field name="arch" type="xml">
+      <form string="Formulario del los pacientes">
+        <sheet>
+          <group colspan="2">
+            <group>
+              <field name="name"/>
+              <field name="nombre"/>
+              <field name="apellido"/>
+            </group>
+            <group>
+              <field name="fec_nac"/>
+              <field name="celular"/>
+            </group>
+          </group>
+        </sheet>
+        <sheet>
+          <group>
+            <field name="id_cita_paciente" readonly="1">
+                   <tree>
+                      <field name="name"/>
+                      <field name="fecha"/>
+                   </tree>
+            </field>
+          </group>
+          <group>
+            <field name="id_registroclinico" readonly="1">
+                   <tree>
+                      <field name="name"/>
+                   </tree>
+            </field>
+          </group>
+        </sheet>
+    </form>
+    </field>
+	</record>
+</odoo>
