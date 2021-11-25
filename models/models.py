@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class prueba(models.Model):
-#     _name = 'prueba.prueba'
-#     _description = 'prueba.prueba'
+# class gestionhospital(models.Model):
+#     _name = 'gestionhospital.gestionhospital'
+#     _description = 'gestionhospital.gestionhospital'
 
 #     name = fields.Char()
 #     value = fields.Integer()

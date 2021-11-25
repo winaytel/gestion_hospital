@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+acceso_cita,cita.gestionhospital,model_cita_gestionhospital,,1,1,1,1
+acceso_doctor,doctor.gestionhospital,model_doctor_gestionhospital,,1,1,1,1
+acceso_especialidad,especialidad.gestionhospital,model_especialidad_gestionhospital,,1,1,1,1
+acceso_paciente,paciente.gestionhospital,model_paciente_gestionhospital,,1,1,1,1
+acceso_registro,registroclinico.gestionhospital,model_registroclinico_gestionhospital,,1,1,1,1
+acceso_sala,sala.gestionhospital,model_sala_gestionhospital,,1,1,1,1

@@ -1,0 +1,34 @@
+<odoo>
+	<record model="ir.ui.view" id="action_vista_registroclinico_tree">
+	    <field name="name">registro.registroclinico.tree</field>
+	    <field name="model">registroclinico.gestionhospital</field>
+	    <field name="arch" type="xml">
+	      <tree string="Tabla de los registros clínicos">
+		    <field name="name"/> 
+		    <field name="diagnostico"/>
+	      </tree>
+	    </field>
+	</record>
+
+	<record model="ir.ui.view" id="action_vista_registroclinico_form">
+	    <field name="name">registro.registroclinico.form</field>
+	    <field name="model">registroclinico.gestionhospital</field>
+	    <field name="arch" type="xml">
+	      <form string="Formulario de los registros clínicos">
+		<sheet>
+		  <group colspan="2">
+		    <group>
+		      <field name="name"/> 
+		      <field name="id_paciente_registro"/>
+		    </group>
+		  </group>
+		  <group>
+		    <field name="diagnostico"/>
+		    <field name="receta"/> 
+		    <field name="examen" /> 
+		  </group>
+		</sheet>
+	      </form>
+	    </field>
+	</record>
+</odoo>

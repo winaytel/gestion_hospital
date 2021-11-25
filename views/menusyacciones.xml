@@ -1,0 +1,48 @@
+<odoo>
+	<record model="ir.actions.act_window" id="action_list_especialidad">
+		<field name="name">Especialidades del hospital</field>
+		<field name="res_model">especialidad.gestionhospital</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="action_list_doctor">
+	    <field name="name">Doctores del hospital</field>
+	    <field name="res_model">doctor.gestionhospital</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_list_cita">
+	    <field name="name">Citas del hospital</field>
+	    <field name="res_model">cita.gestionhospital</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_list_sala">
+	    <field name="name">Salas del hospital</field>
+	    <field name="res_model">sala.gestionhospital</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_list_paciente">
+	    <field name="name">Pacientes del hospital</field>
+	    <field name="res_model">paciente.gestionhospital</field>
+	    <field name="view_mode">kanban,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_list_registroclinico">
+	    <field name="name">Registros clínicos del hospital</field>
+	    <field name="res_model">registroclinico.gestionhospital</field>
+	    <field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem id="menu_principal" name="Registro Hospital"/>
+	<menuitem id="menu_principal_registros" name="Registros" parent="menu_principal"/>
+
+	<menuitem id="menu_especialidades" name="Registro de especialidades" parent="menu_principal_registros" action="action_list_especialidad"/>
+	<menuitem  id="menu_doctor" parent="menu_principal_registros" name="Registro de doctores" action="action_list_doctor"/>
+  	<menuitem  id="menu_cita" parent="menu_principal_registros" name="Registro de citas" 
+  	action="action_list_cita"/>
+  	<menuitem  id="menu_sala" parent="menu_principal_registros" name="Registro de salas" 
+  	action="action_list_sala"/>
+  	<menuitem  id="menu_paciente" parent="menu_principal_registros" name="Registro de pacientes" action="action_list_paciente"/>
+  	<menuitem  id="menu_registroclinico" parent="menu_principal_registros" name="Registros clínicos" action="action_list_registroclinico"/>
+</odoo>

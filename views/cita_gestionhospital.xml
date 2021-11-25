@@ -1,0 +1,37 @@
+<odoo>
+	<record model="ir.ui.view" id="action_vista_cita_tree">
+		<field name="name">registro.cita.tree</field>
+		<field name="model">cita.gestionhospital</field>
+		<field name="arch" type="xml">
+			<tree string="Tabla de las citas">
+				<field name="name"/>
+				<field name="id_paciente_cita"/>
+				<field name="cod_cita"/>
+				<field name="fecha"/>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="action_vista_cita_form">
+		<field name="name">registro.cita.form</field>
+		<field name="model">cita.gestionhospital</field>
+		<field name="arch" type="xml">
+			<form string="Formulario de las citas">
+				<sheet>
+					<group colspan="2">
+						<group>
+							<field name="name"/>
+							<field name="cod_cita"/>
+							<field name="id_sala"/>
+						</group>
+						<group>
+							<field name="id_paciente_cita"/>
+							<field name="fecha"/>
+							<field name="especialidad"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>
