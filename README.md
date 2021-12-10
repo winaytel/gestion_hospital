@@ -2,6 +2,8 @@
 
 Este proyecto es el desarrollo de un módulo personalizado para la gestión de un hospital.
 
+![Portada](https://user-images.githubusercontent.com/78744104/145620386-0d1de591-1515-4901-96e6-3acbe859c458.png)
+
 ### Descripción:
 
 Para el desarrollo del proyecto, se establecieron los siguientes sprints:
